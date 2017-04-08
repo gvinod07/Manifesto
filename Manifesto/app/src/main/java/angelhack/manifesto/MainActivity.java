@@ -24,13 +24,15 @@ public class MainActivity extends AppCompatActivity
     String[] cat = {
             "Sanitation",
             "Education",
-            "Health Care"
+            "Health Care",
+            "Infrastructure"
 
     } ;
     int[] imageId = {
             R.drawable.sanitation,
             R.drawable.education,
-            R.drawable.healthcare
+            R.drawable.healthcare,
+            R.drawable.infranstructure
     };
 
     @Override
