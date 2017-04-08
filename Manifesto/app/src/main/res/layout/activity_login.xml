@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/colorPrimaryDark">
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:background="#ffffff">
+        android:layout_height="wrap_content">
 
         <!--  Header Starts-->
         
@@ -64,7 +65,8 @@
                 android:layout_marginTop="10dip"
                 android:text="Login"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
         <!-- Login Form Ends -->
@@ -77,10 +79,9 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:text="New to Manifesto? Register here"
             android:gravity="center"
-            android:textSize="20dip"
             android:textColor="@color/white"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorAccent"/>
 
     </RelativeLayout>
 </ScrollView>

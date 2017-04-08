@@ -56,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mActivity = this;
+        mDialog = new ProgressDialog(mActivity);
+        mDialog.setMessage("Please Wait");
 
         mEmailInput = (TextInputLayout) findViewById(R.id.login_email_input);
         mPasswordInput = (TextInputLayout) findViewById(R.id.login_password_input);
@@ -67,8 +69,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mDialog.show();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+
+                signin();
             }
         });
 
@@ -92,6 +94,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     Log.d("FireBase", "onAuthStateChanged:signed_in:" + user.getUid());
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                 } else {
                     // User is signed out
                     Log.d("FireBase", "onAuthStateChanged:signed_out");

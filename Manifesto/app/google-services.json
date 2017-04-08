@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "207537587186",
-    "firebase_url": "https://manifesto-2bfde.firebaseio.com",
-    "project_id": "manifesto-2bfde",
-    "storage_bucket": "manifesto-2bfde.appspot.com"
+    "project_number": "959397196441",
+    "firebase_url": "https://manifesto-1a921.firebaseio.com",
+    "project_id": "manifesto-1a921",
+    "storage_bucket": "manifesto-1a921.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:207537587186:android:c85fd5e3cefecece",
+        "mobilesdk_app_id": "1:959397196441:android:c85fd5e3cefecece",
         "android_client_info": {
           "package_name": "angelhack.manifesto"
         }
       },
       "oauth_client": [
         {
-          "client_id": "207537587186-4jc2d8n619iec60lsunpd9to5blc08mc.apps.googleusercontent.com",
+          "client_id": "959397196441-gfjpl042t7b90kj3c7t4as7kep2mpg8p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAGPPJsH6lOpTNWPuNzj-cXmYNJ1BhEXFc"
+          "current_key": "AIzaSyBErI8LD2SDAFDhHpJ4uDYfsGO4v1WatAI"
         }
       ],
       "services": {
