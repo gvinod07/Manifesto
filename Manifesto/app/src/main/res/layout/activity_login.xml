@@ -23,47 +23,64 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip">
-            <!--  Email Label -->
-            <TextView android:layout_width="fill_parent"
+            android:padding="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/login_email_input"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#372c24"
-                android:text="Email"/>
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:layout_marginBottom="20dip"
-                android:singleLine="true"/>
-            <!--  Password Label -->
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#372c24"
-                android:text="Password"/>
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                android:singleLine="true"
-                android:password="true"/>
+                android:layout_alignParentTop="true">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/login_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white" />
+            </android.support.design.widget.TextInputLayout>
+
             <!-- Login button -->
             <Button android:id="@+id/btnLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:text="Login"/>
-            <!-- Link to Registration Screen -->
-            <TextView android:id="@+id/link_to_register"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
-                android:layout_marginBottom="40dip"
-                android:text="New to Manifesto? Register here"
-                android:gravity="center"
-                android:textSize="20dip"
-                android:textColor="#0b84aa"/>
+                android:text="Login"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@color/colorAccent"/>
 
         </LinearLayout>
         <!-- Login Form Ends -->
         <!-- Login Form Ends -->
+
+        <Button android:id="@+id/link_to_register"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="New to Manifesto? Register here"
+            android:gravity="center"
+            android:textSize="20dip"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"/>
 
     </RelativeLayout>
 </ScrollView>
