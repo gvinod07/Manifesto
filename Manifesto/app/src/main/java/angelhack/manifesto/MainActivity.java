@@ -12,9 +12,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    GridView grid;
+    String[] cat = {
+            "Sanitation",
+            "Education",
+            "Health Care"
+
+    } ;
+    int[] imageId = {
+            R.drawable.sanitation,
+            R.drawable.education,
+            R.drawable.healthcare
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +57,19 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        CustomGrid adapter = new CustomGrid(MainActivity.this, cat, imageId);
+        grid=(GridView)findViewById(R.id.grid);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                Toast.makeText(MainActivity.this, "You Clicked at " +cat[+ position], Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     @Override
