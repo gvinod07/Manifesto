@@ -1,36 +1,45 @@
-<LinearLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <EditText
-        android:text="Search"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:id="@+id/search_bar" />
-
-    <Button
-        android:text="Go"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/search_button"
-        android:onClick="onSearch" />
-
-</LinearLayout>
-
-
     <fragment
-        android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="381dp"
-    tools:context="angelhack.manifesto.MapsActivity"
-        android:layout_height="464dp" />
 
-</LinearLayout>
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        tools:context="angelhack.manifesto.MapsActivity"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="20dp"
+        android:background="@color/white">
+
+        <EditText
+            android:hint="Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_bar"
+            android:layout_weight="0.25"
+            android:elevation="10dp"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_button"
+            android:src="@drawable/ic_search_24dp"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

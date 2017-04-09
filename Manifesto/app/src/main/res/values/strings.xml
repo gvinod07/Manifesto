@@ -26,6 +26,8 @@
     <string name="register">Register</string>
     <string name="yourValue">xyz</string>
 
+
+
     <string name="identification_prompt">Choose a identification type</string>
     <string-array name="identification_arrays">
         <item>Aadhar Card</item>
