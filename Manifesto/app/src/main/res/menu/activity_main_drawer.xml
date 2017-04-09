@@ -10,6 +10,11 @@
             android:icon="@drawable/ic_people_black_24dp"
             android:title="Politicians"/>
         <item
+        android:id="@+id/project_list"
+        android:icon="@drawable/ic_folder_black_24dp"
+        android:title="Projects"/>
+
+         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Settings"/>
