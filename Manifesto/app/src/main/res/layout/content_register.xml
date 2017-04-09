@@ -84,11 +84,12 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/identification_arrays"
                 android:prompt="@string/identification_prompt"
-                android:layout_marginTop="10dip"/>
+                android:layout_marginTop="10dp"/>
             <EditText android:id="@+id/identification_no"
                 android:hint="Enter identification number"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
                 android:password="true"
                 android:singleLine="true"
                 android:layout_marginTop="5dip"/>
