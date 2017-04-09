@@ -69,7 +69,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mDialog.show();
-
                 signin();
             }
         });
@@ -136,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void makeProfile(final String mail, String password) {
         try {
-            if (checkInternetConenction()) {
+            if (!checkInternetConenction()) {
                 Toast.makeText(getApplicationContext(), "No internet connection.", Toast.LENGTH_LONG).show();
                 mDialog.hide();
             } else {

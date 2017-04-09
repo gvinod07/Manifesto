@@ -27,7 +27,6 @@
     <string name="yourValue">xyz</string>
 
 
-
     <string name="identification_prompt">Choose a identification type</string>
     <string-array name="identification_arrays">
         <item>Aadhar Card</item>
@@ -36,4 +35,6 @@
         <item>License</item>
     </string-array>
     <string name="title_activity_project">ProjectActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

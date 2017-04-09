@@ -17,12 +17,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,6 +36,8 @@ public class MainActivity extends AppCompatActivity
     private FirebaseAuth mAuth;
     private DatabaseReference mUserRef;
     private DatabaseReference mDatabase;
+
+    private User user;
 
     private String UserID;
     GridView grid;
@@ -63,11 +70,42 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        final TextView t = (TextView) findViewById(R.id.userID_navheader);
+
         mAuth = FirebaseAuth.getInstance();
         UserID = mAuth.getCurrentUser().getUid();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mUserRef = mDatabase.child("useres").getRef();
+        mUserRef = mDatabase.child("users").getRef();
+        mUserRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                User user1 = dataSnapshot.getValue(User.class);
+                Log.d("Firebase", user1.Name);
+                if (user1.uID == UserID)
+                    user = user1;
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
