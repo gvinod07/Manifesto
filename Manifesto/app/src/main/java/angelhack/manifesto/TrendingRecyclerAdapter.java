@@ -1,5 +1,7 @@
 package angelhack.manifesto;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
@@ -14,15 +16,22 @@ import android.widget.TextView;
 
 public class TrendingRecyclerAdapter extends RecyclerView.Adapter<TrendingRecyclerAdapter.ViewHolder> {
 
-    private String[] titles ={"0"};
-    private String[] details={"9"};
-    private int[]images={0};
+    private String[] titles ={"Dam at Kaveri", "Fire in the forest", "Rains back in Manipal"};
+    private String[] details={"FLoods imminent", "Bandipr is on fire", "Thunder and lightning"};
+    private int[]images={R.drawable.dam, R.drawable.fire, R.drawable.storm};
+
+    private Context mContext;
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
+    }
+
+    public TrendingRecyclerAdapter(Context context)
+    {
+        mContext = context;
     }
 
     @Override
@@ -43,6 +52,8 @@ public class TrendingRecyclerAdapter extends RecyclerView.Adapter<TrendingRecycl
         public TextView itemTitle;
         public TextView itemDetail;
         public ViewHolder(View itemView) {
+
+
             super(itemView);
             itemImage = (ImageView) itemView.findViewById(R.id.item_image);
             itemTitle = (TextView)itemView.findViewById(R.id.item_title);
@@ -50,7 +61,8 @@ public class TrendingRecyclerAdapter extends RecyclerView.Adapter<TrendingRecycl
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    Intent intent = new Intent(mContext, ProjectActivity.class);
+                    mContext.startActivity(intent);
                 }
             });
         }

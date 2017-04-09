@@ -1,5 +1,6 @@
 package angelhack.manifesto;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,8 +16,6 @@ public class ProjectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
     }
 
 }

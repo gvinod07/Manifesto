@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
-    android:background="@color/colorPrimaryDark">
+    android:background="#bdbdbd">
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -38,8 +38,7 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white" />
+                    android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -54,8 +53,7 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="@color/white" />
+                    android:inputType="textPassword" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Login button -->

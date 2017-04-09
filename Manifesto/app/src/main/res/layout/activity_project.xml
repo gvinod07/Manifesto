@@ -22,6 +22,4 @@
 
     <include layout="@layout/content_project" />
 
-
-
 </android.support.design.widget.CoordinatorLayout>

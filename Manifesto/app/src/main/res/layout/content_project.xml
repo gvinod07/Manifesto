@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
     <ScrollView
@@ -9,6 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:fillViewport="true">
+
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" android:background="#ffffff">
@@ -18,52 +18,60 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
                 android:id="@+id/linearLayout"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="48dp">
+                android:layout_alignParentStart="true">
 
-
-
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/img_View_Project"
+                    android:src="@drawable/dam"/>
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/Descripton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Project Details"
-                android:textColor="#372c24"
                 android:padding="20dp"
-                android:layout_marginBottom="50dp"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kaveri Dam project is underway with a Rs. 20000 crore rupees"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/Politician_in_charge"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Politician Details"
-                android:textColor="#372c24"
                 android:layout_below="@+id/textView3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-
-                android:layout_marginBottom="30dp"
-                android:padding="20dp"/>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Point of Contact"
-                android:textColor="#372c24"
                 android:padding="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignLeft="@+id/textView"
-                android:layout_alignStart="@+id/textView" />
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hon. MLA Yash Kumar Lal"
+                    android:paddingLeft="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    />
 
             </LinearLayout>
 
@@ -85,9 +93,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:padding="20dp"
-            android:text="Rate and Review" />
+            android:text="Rate and Review"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@color/colorPrimary"/>
 
     </LinearLayout>
 
@@ -105,9 +115,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp"
-            android:padding="20dp"
-            android:text="Fix Issues" />
+            android:text="Fix Issues"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@color/colorAccent"/>
 
     </LinearLayout>
 

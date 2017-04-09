@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 User user1 = dataSnapshot.getValue(User.class);
                 Log.d("Firebase", user1.Name);
-                if (user1.uID == UserID)
+                if (user1.uID.equals(UserID))
                     user = user1;
             }
 
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView = (RecyclerView)findViewById(R.id.trending_recycler_view);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        trendingAdapter = new TrendingRecyclerAdapter();
+        trendingAdapter = new TrendingRecyclerAdapter(this);
         recyclerView.setAdapter(trendingAdapter);
     }
 
@@ -180,12 +180,26 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.politician_list) {
 
-        } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.project_list) {
+
+            Intent intent = new Intent(this, ProjectActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.about_us) {
 
+        }
+
+        else if(id == R.id.logout)
+        {
+            mAuth.signOut();
+            Toast.makeText(this, "Logged out", Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

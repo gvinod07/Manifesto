@@ -27,4 +27,9 @@
             android:icon="@drawable/ic_info_outline_black_24dp"
             android:title="About Us"/>
 
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout" />
+
 </menu>

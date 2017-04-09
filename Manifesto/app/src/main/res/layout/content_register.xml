@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="#bdbdbd"
     >
 
     <LinearLayout
@@ -32,8 +32,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="Full Name"
-                android:inputType="textPersonName"
-                android:textColor="@color/white"/>
+                android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -47,8 +46,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/white"/>
+                android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -62,8 +60,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="@color/white"/>
+                android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -77,8 +74,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="Address"
-                android:inputType="textPostalAddress"
-                android:textColor="@color/white"/>
+                android:inputType="textPostalAddress" />
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
@@ -88,20 +84,13 @@
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
+                android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:entries="@array/identification_arrays"
                 android:prompt="@string/identification_prompt"
-                android:layout_marginTop="10dp"/>
-            <EditText android:id="@+id/identification_no"
-                android:hint="Enter identification number"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:password="true"
-                android:singleLine="true"
-                android:layout_marginTop="5dip"/>
-
-
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginTop="13dp"
+                />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/identity_input_layout"
@@ -115,8 +104,7 @@
                     android:layout_centerHorizontal="true"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="Identification Number"
-                    android:inputType="text"
-                    android:textColor="@color/white"/>
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
         </LinearLayout>
