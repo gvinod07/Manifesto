@@ -34,12 +34,12 @@ dependencies {
     compile 'com.google.android.gms:play-services:10.2.1'
     testCompile 'junit:junit:4.12'
 
-<<<<<<< HEAD
-
-=======
     compile 'com.google.firebase:firebase-auth:10.2.1'
->>>>>>> 34bfc73bc9180a5077ee06b75a411bb6b5539e0e
     compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

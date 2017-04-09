@@ -16,11 +16,11 @@ public class TrendingRecyclerAdapter extends RecyclerView.Adapter<TrendingRecycl
 
     private String[] titles ={"0"};
     private String[] details={"9"};
-    private int[]images={};
+    private int[]images={0};
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.id.card_layout, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }
